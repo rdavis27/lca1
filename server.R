@@ -630,12 +630,12 @@ shinyServer(
                 xsalary <- c(xsalary, wunit[2], wunit[3], wunit[4])
             }
             xx <- xx[xx$WAGE_UNIT %in% xsalary | xx$WAGE_UNIT %in% xsalary,]
-            xx$SALARY <- xx$WAGE_RATE_FROM
+            xx$SALARY <- as.numeric(xx$WAGE_RATE_FROM)
             xx$SALARY[xx$WAGE_UNIT == wunit[1]] <- 2000 * as.numeric(xx$SALARY[xx$WAGE_UNIT == wunit[1]])
             xx$SALARY[xx$WAGE_UNIT == wunit[2]] <-   52 * as.numeric(xx$SALARY[xx$WAGE_UNIT == wunit[2]])
             xx$SALARY[xx$WAGE_UNIT == wunit[3]] <-   26 * as.numeric(xx$SALARY[xx$WAGE_UNIT == wunit[3]])
             xx$SALARY[xx$WAGE_UNIT == wunit[4]] <-   12 * as.numeric(xx$SALARY[xx$WAGE_UNIT == wunit[4]])
-            xx$PSALARY <- xx$PREVAILING_WAGE
+            xx$PSALARY <- as.numeric(xx$PREVAILING_WAGE)
             xx$PW_UNIT[is.na(xx$PW_UNIT)] <- "" #DEBUG (unnecessary?)
             xx$PW_UNIT <- str_trim(xx$PW_UNIT) #DEBUG (unnecessary?)
             xx$PSALARY[xx$PW_UNIT  == wunit[1]] <- 2000 * as.numeric(xx$PSALARY[xx$PW_UNIT  == wunit[1]])

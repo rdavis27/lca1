@@ -1,4 +1,4 @@
-cc <<- read.table("xcols/cols2018.txt", stringsAsFactors = FALSE, header = TRUE) # make global to debug
+cc <<- read.table("xcols/cols2018_0.txt", stringsAsFactors = FALSE, header = TRUE) # make global to debug
 
 shinyUI(pageWithSidebar(
     headerPanel("LCA Disclosure Data"),
