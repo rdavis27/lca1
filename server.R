@@ -350,7 +350,22 @@ shinyServer(
                         dd <- dd[!is.na(dd$EMPLOYER_NAME2)]
                     }
                 }
-                gg <- dd[, .(WORKERS = sum(TOTAL_WORKERS), APPLICATIONS = .N), by = groups] #ADD WORKERS
+                if (input$xsubgroups){
+                    gg <- dd[, .(APPLICATIONS = .N,
+                                 WORKERS = sum(TOTAL_WORKERS),
+                                 NEW_EMPLOYMENT = sum(NEW_EMPLOYMENT),
+                                 CONTINUED_EMP = sum(CONTINUED_EMP),
+                                 CHANGE_PREV_EMP = sum(CHANGE_PREV_EMP),
+                                 NEW_CONCUR_EMP = sum(NEW_CONCUR_EMP),
+                                 CHANGE_EMPLOYER = sum(CHANGE_EMPLOYER),
+                                 AMENDED_PETITION = sum(AMENDED_PETITION),
+                                 TOTAL_SUBGROUPS = sum(NEW_EMPLOYMENT+CONTINUED_EMP+CHANGE_PREV_EMP+
+                                                           NEW_CONCUR_EMP+CHANGE_EMPLOYER+AMENDED_PETITION)),
+                             by = groups] #ADD WORKERS AND SUBGROUPS
+                }
+                else{
+                    gg <- dd[, .(WORKERS = sum(TOTAL_WORKERS), APPLICATIONS = .N), by = groups] #ADD WORKERS
+                }
                 if (input$xsort == "TOTAL_WORKERS"){
                     gg <- gg[order(-WORKERS)]
                 }
@@ -478,6 +493,13 @@ shinyServer(
                 }
                 if (year == 2021 & ibeg == 1 & iend == 4){
                     ibeg <- 3 # for 2021, this contains quarters 1-3
+                    csvfile  <- paste0("data/",file_prefix,year,"_Q3.csv") #DEBUG-CHANGE FOR FULL 2021
+                    ccfile <- paste0("cols/cols",year,"_Q3.txt")
+                }
+                else if (year == 2023 & ibeg == 1 & iend == 2){
+                    ibeg <- 2 # for 2023, this contains quarters 1-2
+                    csvfile  <- paste0("data/",file_prefix,year,"_Q2.csv") #DEBUG-CHANGE FOR Q1-Q2 2023
+                    ccfile <- paste0("cols/cols",year,"_Q2.txt")
                 }
                 else if (ibeg < 1){
                     ibeg <- 1

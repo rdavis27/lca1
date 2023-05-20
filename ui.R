@@ -1,16 +1,16 @@
-cc <<- read.table("xcols/cols2018_0.txt", stringsAsFactors = FALSE, header = TRUE) # make global to debug
+cc <<- read.table("xcols/cols2023_Q2_0.txt", stringsAsFactors = FALSE, header = TRUE) # make global to debug
 
 shinyUI(pageWithSidebar(
     headerPanel("LCA Disclosure Data"),
     sidebarPanel(
         width = 2,
         splitLayout(
-            numericInput("minyear", "Start Year", min = 2001, max = 2022, value = 2021),
-            numericInput("maxyear", "End Year", min = 2001, max = 2022, value = 2021)
+            numericInput("minyear", "Start Year", min = 2000, max = 2023, value = 2023),
+            numericInput("maxyear", "End Year", min = 2000, max = 2023, value = 2023)
         ),
         splitLayout(
             numericInput("minqtr", "Start Qtr", min = 1, max = 4, value = 1),
-            numericInput("maxqtr", "End Qtr", min = 1, max = 4, value = 4)
+            numericInput("maxqtr", "End Qtr", min = 1, max = 4, value = 1)
         ),
         splitLayout(
             actionButton("submit", "Submit",
@@ -26,6 +26,7 @@ shinyUI(pageWithSidebar(
         selectInput("xgroup", "Group by",
             choices = sort(cc$label[cc$grp == 1]),
             selected = "", multiple = TRUE),
+        checkboxInput("xsubgroups", "Show worker subgroups", value = FALSE),
         selectInput("xsort", "Sort by",
             choices = sort(c(cc$label[cc$sort == 1],"APPLICATIONS","SALARY","PSALARY","WAGE_PWAGE")),
             selected = "TOTAL_WORKERS", multiple = FALSE), 
