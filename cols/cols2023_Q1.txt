@@ -27,9 +27,9 @@
            "EMPLOYER_POSTAL_CODE"           "EMPLOYER_POSTAL_CODE"           "EMPLOYER_POSTAL_CODE"  chr   0   0    0    0    0    0
                "EMPLOYER_COUNTRY"               "EMPLOYER_COUNTRY"               "EMPLOYER_COUNTRY"  chr   0   0    0    0    0    0
               "EMPLOYER_PROVINCE"              "EMPLOYER_PROVINCE"              "EMPLOYER_PROVINCE"  chr   0   0    0    0    0    0
-                 "EMPLOYER_PHONE"                 "EMPLOYER_PHONE"                 "EMPLOYER_PHONE"  num   0   0    0    0    0    0
+                 "EMPLOYER_PHONE"                 "EMPLOYER_PHONE"                 "EMPLOYER_PHONE"  chr   0   0    0    0    0    0
              "EMPLOYER_PHONE_EXT"             "EMPLOYER_PHONE_EXT"             "EMPLOYER_PHONE_EXT"  num   0   0    0    0    0    0
-                     "NAICS_CODE"                     "NAICS_CODE"                     "NAICS_CODE"  num   0   0    0    0    0    0
+                     "NAICS_CODE"                     "NAICS_CODE"                     "NAICS_CODE"  chr   0   0    0    0    0    0
          "EMPLOYER_POC_LAST_NAME"         "EMPLOYER_POC_LAST_NAME"         "EMPLOYER_POC_LAST_NAME"  chr   0   0    0    0    0    0
         "EMPLOYER_POC_FIRST_NAME"        "EMPLOYER_POC_FIRST_NAME"        "EMPLOYER_POC_FIRST_NAME"  chr   0   0    0    0    0    0
        "EMPLOYER_POC_MIDDLE_NAME"       "EMPLOYER_POC_MIDDLE_NAME"       "EMPLOYER_POC_MIDDLE_NAME"  chr   0   0    0    0    0    0
@@ -41,7 +41,7 @@
        "EMPLOYER_POC_POSTAL_CODE"       "EMPLOYER_POC_POSTAL_CODE"       "EMPLOYER_POC_POSTAL_CODE"  chr   0   0    0    0    0    0
            "EMPLOYER_POC_COUNTRY"           "EMPLOYER_POC_COUNTRY"           "EMPLOYER_POC_COUNTRY"  chr   0   0    0    0    0    0
           "EMPLOYER_POC_PROVINCE"          "EMPLOYER_POC_PROVINCE"          "EMPLOYER_POC_PROVINCE"  chr   0   0    0    0    0    0
-             "EMPLOYER_POC_PHONE"             "EMPLOYER_POC_PHONE"             "EMPLOYER_POC_PHONE"  num   0   0    0    0    0    0
+             "EMPLOYER_POC_PHONE"             "EMPLOYER_POC_PHONE"             "EMPLOYER_POC_PHONE"  chr   0   0    0    0    0    0
          "EMPLOYER_POC_PHONE_EXT"         "EMPLOYER_POC_PHONE_EXT"         "EMPLOYER_POC_PHONE_EXT"  num   0   0    0    0    0    0
              "EMPLOYER_POC_EMAIL"             "EMPLOYER_POC_EMAIL"             "EMPLOYER_POC_EMAIL"  chr   0   0    0    0    0    0
     "AGENT_REPRESENTING_EMPLOYER"    "AGENT_REPRESENTING_EMPLOYER"    "AGENT_REPRESENTING_EMPLOYER"  chr   0   0    0    0    0    0
@@ -55,8 +55,8 @@
      "AGENT_ATTORNEY_POSTAL_CODE"     "AGENT_ATTORNEY_POSTAL_CODE"     "AGENT_ATTORNEY_POSTAL_CODE"  chr   0   0    0    0    0    0
          "AGENT_ATTORNEY_COUNTRY"         "AGENT_ATTORNEY_COUNTRY"         "AGENT_ATTORNEY_COUNTRY"  chr   0   0    0    0    0    0
         "AGENT_ATTORNEY_PROVINCE"        "AGENT_ATTORNEY_PROVINCE"        "AGENT_ATTORNEY_PROVINCE"  chr   0   0    0    0    0    0
-           "AGENT_ATTORNEY_PHONE"           "AGENT_ATTORNEY_PHONE"           "AGENT_ATTORNEY_PHONE"  num   0   0    0    0    0    0
-       "AGENT_ATTORNEY_PHONE_EXT"       "AGENT_ATTORNEY_PHONE_EXT"       "AGENT_ATTORNEY_PHONE_EXT"  num   0   0    0    0    0    0
+           "AGENT_ATTORNEY_PHONE"           "AGENT_ATTORNEY_PHONE"           "AGENT_ATTORNEY_PHONE"  chr   0   0    0    0    0    0
+       "AGENT_ATTORNEY_PHONE_EXT"       "AGENT_ATTORNEY_PHONE_EXT"       "AGENT_ATTORNEY_PHONE_EXT"  chr   0   0    0    0    0    0
    "AGENT_ATTORNEY_EMAIL_ADDRESS"   "AGENT_ATTORNEY_EMAIL_ADDRESS"   "AGENT_ATTORNEY_EMAIL_ADDRESS"  chr   0   0    0    0    0    0
      "LAWFIRM_NAME_BUSINESS_NAME"     "LAWFIRM_NAME_BUSINESS_NAME"     "LAWFIRM_NAME_BUSINESS_NAME"  chr   0   0    0    0    0    0
          "STATE_OF_HIGHEST_COURT"         "STATE_OF_HIGHEST_COURT"         "STATE_OF_HIGHEST_COURT"  chr   0   0    0    0    0    0
