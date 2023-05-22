@@ -1,5 +1,6 @@
                             match                   label type csv grp show sort srch wdth
                     "CASE_STATUS"           "CASE_STATUS"  chr   1   1    1    1    1    0
+                  "RECEIVED_DATE"         "RECEIVED_DATE" date   1   0    0    1    0    0
                   "DECISION_DATE"         "DECISION_DATE" date   1   0    0    1    0    0
                      "VISA_CLASS"            "VISA_CLASS"  chr   1   1    0    1    0    0
                       "JOB_TITLE"             "JOB_TITLE"  chr   1   1    0    1    0    1
@@ -8,6 +9,12 @@
                      "BEGIN_DATE"            "BEGIN_DATE"  chr   1   1    0    1    0    0
                        "END_DATE"              "END_DATE"  chr   1   1    0    1    0    0
          "TOTAL_WORKER_POSITIONS"         "TOTAL_WORKERS"  chr   1   1    1    1    0    0
+                 "NEW_EMPLOYMENT"        "NEW_EMPLOYMENT"  chr   1   1    0    1    0    0
+           "CONTINUED_EMPLOYMENT"         "CONTINUED_EMP"  chr   1   1    0    1    0    0
+     "CHANGE_PREVIOUS_EMPLOYMENT"       "CHANGE_PREV_EMP"  chr   1   1    0    1    0    0
+      "NEW_CONCURRENT_EMPLOYMENT"        "NEW_CONCUR_EMP"  chr   1   1    0    1    0    0
+                "CHANGE_EMPLOYER"       "CHANGE_EMPLOYER"  chr   1   1    0    1    0    0
+               "AMENDED_PETITION"      "AMENDED_PETITION"  chr   1   1    0    1    0    0
                   "EMPLOYER_NAME"         "EMPLOYER_NAME"  chr   1   1    1    1    1    1
                   "EMPLOYER_CITY"              "EMP_CITY"  chr   1   1    0    1    0    1
                  "EMPLOYER_STATE"             "EMP_STATE"  chr   1   1    0    1    0    0
