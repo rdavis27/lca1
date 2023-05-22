@@ -144,7 +144,7 @@ shinyServer(
             }
             ngroup <- length(input$xgroup)
             if (ngroup == 0){
-                varname <- input$uvar
+                varname <- input$uxvar
                 if (varname %in% c("YEAR","SALARY","PSALARY","WAGE_PWAGE")){
                     type <- "num"
                 }
@@ -153,9 +153,14 @@ shinyServer(
                     xx[[varname]] <- as.Date(xx[[varname]])
                 }
                 title <- getTitle(varname, input$stitle3)
-                xlabel <- varname
-                ylabel <- "APPLICATIONS"
-                gg <- ggplot(xx, aes_string(x=varname))
+                xlabel <- input$uxvar
+                ylabel <- input$uyvar
+                if (input$uyvar == "APPLICATIONS"){
+                    gg <- ggplot(xx, aes_string(x=varname))
+                }
+                else{
+                    gg <- ggplot(xx, aes_string(x=varname, weight=input$uyvar))
+                }
                 ubins <- input$binwidth
                 if (ubins < 0){
                     gg <- gg + geom_histogram(binwidth= -ubins, color="black", fill=input$ucolor)
